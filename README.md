@@ -249,6 +249,8 @@ A short (2–3 minute) walkthrough demonstrating:
 * Search and filtering
 * Team and planned task workflows
 
+**Demo Link:** https://drive.google.com/drive/folders/1-ILt9QvQeial2wW40ebqSPLBUlzHe0Tb?usp=sharing
+
 ---
 
 ## Conclusion
