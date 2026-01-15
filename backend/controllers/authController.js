@@ -25,16 +25,14 @@ exports.register = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const user = await User.create({
+    await User.create({
       name,
       email,
       password: hashedPassword,
       authProvider: "LOCAL"
     });
 
-    res.status(201).json({
-      message: "Registration successful"
-    });
+    res.status(201).json({ message: "Registration successful" });
 
   } catch (err) {
     console.error("Register error:", err);
@@ -54,12 +52,10 @@ exports.login = async (req, res) => {
     }
 
     const user = await User.findOne({ email });
-
     if (!user) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
 
-    // 🔴 BLOCK GOOGLE USERS FROM PASSWORD LOGIN
     if (user.authProvider === "GOOGLE") {
       return res.status(400).json({
         message: "This account uses Google login. Please sign in with Google."
@@ -67,7 +63,6 @@ exports.login = async (req, res) => {
     }
 
     const isMatch = await bcrypt.compare(password, user.password);
-
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid credentials" });
     }
@@ -100,26 +95,29 @@ exports.googleLogin = async (req, res) => {
   try {
     const { token } = req.body;
 
-    const ticket = await client.verifyIdToken({
+    if (!token) {
+      return res.status(400).json({ message: "Google token missing" });
+    }
+
+    const ticket = await googleClient.verifyIdToken({
       idToken: token,
-      audience: process.env.GOOGLE_CLIENT_ID
+      audience: process.env.GOOGLE_CLIENT_ID,
     });
 
-    const { name, email } = ticket.getPayload();
+    const payload = ticket.getPayload();
+    if (!payload) {
+      return res.status(400).json({ message: "Invalid Google token" });
+    }
+
+    const { email, name } = payload;
 
     let user = await User.findOne({ email });
-
-    // 🔴 If user exists but was LOCAL, block Google login
-    if (user && user.authProvider === "LOCAL") {
-      return res.status(400).json({
-        message: "This email is registered with password. Please login using email & password."
-      });
-    }
 
     if (!user) {
       user = await User.create({
         name,
         email,
+        password: null,
         authProvider: "GOOGLE"
       });
     }
@@ -139,9 +137,9 @@ exports.googleLogin = async (req, res) => {
       }
     });
 
-  } catch (err) {
-    console.error("Google login error:", err);
-    res.status(500).json({ message: "Google login failed" });
+  } catch (error) {
+    console.error("Google login error:", error);
+    res.status(500).json({ message: "Google authentication failed" });
   }
 };
 
