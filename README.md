@@ -1,14 +1,12 @@
-
-
 ---
 
 # Task Management System
 
 ## Overview
 
-The Task Management System is a full-stack web application designed to help individuals and small teams efficiently organize, track, and manage their daily tasks. The platform provides a secure authentication system and a clean, intuitive interface for managing personal and team-based tasks.
+The Task Management System is a full-stack web application built to help individuals and small teams organize, track, and manage their daily work efficiently. The platform offers secure authentication and an intuitive interface for handling both personal and collaborative tasks.
 
-Users can create, update, prioritize, and track tasks with due dates and status indicators, while gaining insights through a dashboard that visualizes task progress and productivity trends. The application emphasizes usability, scalability, and real-world workflow management.
+Users can create, update, prioritize, and monitor tasks using clear status indicators and due dates. A dedicated dashboard provides meaningful insights into task progress and productivity trends. The application is designed with simplicity, scalability, and real-world usability in mind.
 
 ---
 
@@ -44,13 +42,13 @@ Users can create, update, prioritize, and track tasks with due dates and status 
 * User registration and login
 * JWT-based authentication
 * Protected routes
-* Google OAuth login (Bonus feature)
+* Google OAuth login (bonus feature)
 * Secure logout functionality
 
 ### Task Management
 
 * Full CRUD operations for tasks
-* Separation of Personal and Team-based tasks
+* Clear separation between personal and team-based tasks
 * Task categorization using tags
 * Priority levels: High, Medium, Low
 * Task status tracking: Pending, In Progress, Completed
@@ -59,11 +57,11 @@ Users can create, update, prioritize, and track tasks with due dates and status 
 
 ### Dashboard
 
-* Task statistics for both personal and team tasks
+* Task statistics for personal and team tasks
 * Completed vs pending task insights
-* Visual charts displaying task completion trends
+* Visual charts showing task completion trends
 * Team overview section
-* Planned (Today’s Tasks) view for daily productivity
+* Planned (Today’s Tasks) view for daily task tracking
 
 ### Filters & Search
 
@@ -73,12 +71,12 @@ Users can create, update, prioritize, and track tasks with due dates and status 
   * Status
   * Priority
   * Category
-* Filters available for both Personal and Team task views
+* Filters supported for both personal and team task views
 
-### UI/UX
+### UI / UX
 
 * Fully responsive design
-* Clean, modern UI inspired by Figma-style layouts
+* Clean, modern interface inspired by Figma-style layouts
 * Loading states and error handling
 * Sidebar-based navigation
 * Calendar-based task planning interface
@@ -102,7 +100,7 @@ Users can create, update, prioritize, and track tasks with due dates and status 
    npm install
    ```
 
-3. Create a `.env` file and configure the following variables:
+3. Create a `.env` file and configure:
 
    ```env
    PORT=5000
@@ -151,8 +149,7 @@ Users can create, update, prioritize, and track tasks with due dates and status 
 
 The backend exposes RESTful APIs for authentication, task management, team management, and dashboard analytics.
 
-Swagger / OpenAPI documentation can be integrated to visualize and test API endpoints.
-(Recommended for production and API testing.)
+Swagger (OpenAPI) documentation is available for exploring and testing all API endpoints.
 
 ---
 
@@ -191,23 +188,23 @@ Swagger / OpenAPI documentation can be integrated to visualize and test API endp
 
 ## Challenges and Solutions
 
-### Challenge 1: Managing Personal vs Team Tasks
+### Challenge 1: Handling Personal vs Team Tasks
 
 **Problem:**
-Ensuring proper access control and visibility for personal and team-based tasks.
+Ensuring correct access control and visibility for tasks belonging to individuals versus teams.
 
 **Solution:**
-Implemented task types (`PERSONAL` and `TEAM`) along with permission checks based on task ownership, team membership, and assigned users.
+Introduced task types (`PERSONAL` and `TEAM`) along with permission checks based on ownership, team membership, and assignment rules.
 
 ---
 
-### Challenge 2: Dashboard Analytics & Visualization
+### Challenge 2: Dashboard Analytics and Visualization
 
 **Problem:**
-Displaying meaningful productivity insights over time.
+Presenting meaningful productivity insights over time.
 
 **Solution:**
-Used MongoDB timestamps and aggregation logic to generate chart-ready data for completed tasks over the last 10–15 days, enabling clear visual trends.
+Used task timestamps and aggregation logic to generate chart-ready data for completed tasks across the last 10–15 days, enabling clear visual trends on the dashboard.
 
 ---
 
@@ -217,45 +214,46 @@ Used MongoDB timestamps and aggregation logic to generate chart-ready data for c
 * Backend-level search and pagination
 * Role-based access control
 * Notifications and reminders
-* Advanced Google Calendar synchronization
+* Deeper Google Calendar synchronization
 
 ---
 
 ## Demo Credentials
 
-You can use the following demo account to explore the application:
+The following demo account can be used to explore the application:
 
-**Email:** testingmail@test.com 
-**Password:** CRxa])N6>7kgh'k
+**Email:** `testingmail@test.com`
+**Password:** `CRxa])N6>7kgh'k`
 
-Alternatively, you may sign in using Google OAuth.
+Alternatively, users may sign in using Google OAuth.
+
+> Note: This demo account is provided for evaluation purposes only.
 
 ---
 
 ## Live Demo & Deployment
 
-* **Backend:** https://task-manager-fullstack-88dz.onrender.com
-* **Frontend:** https://task-manager-fullstack-beta.vercel.app/
-* **Swagger:** https://task-manager-fullstack-88dz.onrender.com/api-docs
+* **Backend:** [https://task-manager-fullstack-88dz.onrender.com](https://task-manager-fullstack-88dz.onrender.com)
+* **Frontend:** [https://task-manager-fullstack-beta.vercel.app](https://task-manager-fullstack-beta.vercel.app)
+* **Swagger:** [https://task-manager-fullstack-88dz.onrender.com/api-docs](https://task-manager-fullstack-88dz.onrender.com/api-docs)
 * **Database:** MongoDB Atlas
 
 ---
 
 ## Video Demo
 
-A 2–3 minute walkthrough demonstrating:
+A short (2–3 minute) walkthrough demonstrating:
 
 * Authentication flow
 * Task CRUD operations
 * Dashboard analytics
 * Search and filtering
-* Team tasks and planned tasks workflow
+* Team and planned task workflows
 
 ---
 
 ## Conclusion
 
-This project demonstrates full-stack development expertise, including frontend-backend integration, secure authentication, database modeling, RESTful API design, and modern UI/UX practices. It is built to reflect real-world task management workflows while maintaining scalability and clean code architecture.
+This project demonstrates full-stack development skills across frontend and backend integration, secure authentication, database modeling, RESTful API design, and modern UI/UX practices. It reflects real-world task management workflows while maintaining clean architecture and scalability.
 
 ---
-
