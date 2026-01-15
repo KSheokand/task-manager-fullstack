@@ -224,7 +224,7 @@ Used MongoDB timestamps and aggregation logic to generate chart-ready data for c
 ## Live Demo & Deployment
 
 * **Frontend:** https://task-manager-fullstack-88dz.onrender.com
-* **Backend:** task-manager-fullstack-beta.vercel.app
+* **Backend:** https://task-manager-fullstack-beta.vercel.app/
 * **Swagger:** https://task-manager-fullstack-88dz.onrender.com/api-docs
 * **Database:** MongoDB Atlas
 
