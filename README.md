@@ -221,6 +221,17 @@ Used MongoDB timestamps and aggregation logic to generate chart-ready data for c
 
 ---
 
+## Demo Credentials
+
+You can use the following demo account to explore the application:
+
+**Email:** testingmail@test.com 
+**Password:** CRxa])N6>7kgh'k
+
+Alternatively, you may sign in using Google OAuth.
+
+---
+
 ## Live Demo & Deployment
 
 * **Backend:** https://task-manager-fullstack-88dz.onrender.com
