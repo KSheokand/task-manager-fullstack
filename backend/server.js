@@ -11,7 +11,15 @@ connectDB();
 const app = express();
 
 /* ---------- MIDDLEWARE ---------- */
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "https://task-manager-fullstack-beta.vercel.app"
+    ],
+    credentials: true
+  })
+);
 app.use(express.json());
 
 /* ---------- ROUTES ---------- */
