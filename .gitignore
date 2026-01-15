@@ -1,0 +1,64 @@
+# ===============================
+# GENERAL
+# ===============================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===============================
+# ENV FILES (VERY IMPORTANT)
+# ===============================
+.env
+.env.local
+.env.development
+.env.production
+
+# ===============================
+# BACKEND
+# ===============================
+backend/node_modules/
+backend/.env
+backend/logs/
+backend/dist/
+backend/build/
+
+# ===============================
+# FRONTEND
+# ===============================
+frontend/node_modules/
+frontend/.env
+frontend/.env.local
+frontend/.env.production
+frontend/dist/
+frontend/build/
+
+# ===============================
+# VITE
+# ===============================
+frontend/.vite/
+
+# ===============================
+# OS FILES
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# EDITOR / IDE
+# ===============================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# COVERAGE
+# ===============================
+coverage/
+
+# ===============================
+# SWAGGER OUTPUT (IF GENERATED)
+# ===============================
+swagger-output.json
