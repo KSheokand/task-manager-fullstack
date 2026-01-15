@@ -236,7 +236,6 @@ Alternatively, users may sign in using Google OAuth.
 * **Backend:** [https://task-manager-fullstack-88dz.onrender.com](https://task-manager-fullstack-88dz.onrender.com)
 * **Frontend:** [https://task-manager-fullstack-beta.vercel.app](https://task-manager-fullstack-beta.vercel.app)
 * **Swagger:** [https://task-manager-fullstack-88dz.onrender.com/api-docs](https://task-manager-fullstack-88dz.onrender.com/api-docs)
-* **Database:** MongoDB Atlas
 
 ---
 
